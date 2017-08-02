@@ -1,0 +1,34 @@
+package:
+  name: bioconductor-polyester
+  version: 1.12.0
+source:
+  fn: polyester_1.12.0.tar.gz
+  url: https://bioconductor.org/packages/release/bioc/src/contrib/polyester_1.12.0.tar.gz
+  md5: 28ac32f483e8199d29f2480dff2152f9
+build:
+  number: 0
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - bioconductor-biostrings
+    - bioconductor-iranges
+    - bioconductor-s4vectors
+    - bioconductor-limma
+    - bioconductor-zlibbioc
+    - r
+  run:
+    - bioconductor-biostrings
+    - bioconductor-iranges
+    - bioconductor-s4vectors
+    - bioconductor-limma
+    - bioconductor-zlibbioc
+    - r
+test:
+  commands:
+    - '$R -e "library(''polyester'')"'
+about:
+  home: http://bioconductor.org/packages/release/bioc/html/csaw.html
+  license: GPL-3
+  summary: 'This package can be used to simulate RNA-seq reads from differential expression experiments with replicates. The reads can then be aligned and used to perform comparisons of methods for differential expression.'

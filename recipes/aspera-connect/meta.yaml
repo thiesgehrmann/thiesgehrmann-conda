@@ -1,0 +1,25 @@
+package:
+  name: aspera-connect
+  version: 3.7.2
+
+build:
+  number: 0
+  skip: False
+
+source:
+  url: http://download.asperasoft.com/download/sw/connect/3.7.2/aspera-connect-3.7.2.141527-linux-64.sh
+  md5: bd0e1071a3af5b434aae8d471ef7cdb8
+
+requirements:
+  run:
+    - openssl
+
+test:
+  commands:
+    - ascp -h
+
+about:
+  home: http://asperasoft.com/
+  summary: Data transfer program
+  license: faspex
+

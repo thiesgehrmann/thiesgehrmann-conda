@@ -1,0 +1,31 @@
+package:
+  name: perl-object-insideout
+  version: "4.04"
+
+source:
+  fn: Object-InsideOut-4.04.tar.gz
+  url: http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/Object-InsideOut-4.04.tar.gz
+  md5: bf088927de62e39d6142a1e19b58818b
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl-threaded
+    - perl-module-build
+    - perl-exception-class
+    - perl-test-more
+
+  run:
+    - perl-threaded
+    - perl-exception-class
+
+test:
+  imports:
+    - Object::InsideOut
+
+about:
+  home: http://search.cpan.org/~jdhedden/Object-InsideOut-4.04/lib/Object/InsideOut.pod
+  license: perl_5
+  summary: 'Object::InsideOut - Comprehensive inside-out object support module'

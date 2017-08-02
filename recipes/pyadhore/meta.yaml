@@ -1,0 +1,31 @@
+package:
+  name: pyadhore
+  version: 0.1.2
+
+source:
+  fn: v0.1.2.tar.gz
+  url: https://github.com/widdowquinn/pyADHoRe/archive/v0.1.2.tar.gz
+  md5: 1cc6d15852d20218d6fe3f2029de1429
+
+build:
+  skip: False # [not py27]
+  number: 1
+
+requirements:
+  build:
+    - python
+    - networkx
+
+  run:
+    - python
+    - networkx
+
+test:
+  imports:
+    - pyadhore 
+
+about:
+  home: https://github.com/widdowquinn/pyADHoRe
+  license: gplv3
+  summary: "Python code for handling i-ADHoRe output."
+

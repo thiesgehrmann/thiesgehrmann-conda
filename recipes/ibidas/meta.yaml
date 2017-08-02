@@ -1,0 +1,43 @@
+
+#conda build ibidas --python 2.7
+
+package:
+  name: ibidas
+  version: 0.1.26
+
+source:
+  fn: Ibidas-0.1.26.tar.gz
+  url: https://pypi.python.org/packages/42/1c/f6341d18346f87621b575a7d7ba42b79a036c4141c63f677c95863da6629/Ibidas-0.1.26.tar.gz
+  md5: 59eb662eeb24e4f6e4503fe5c222feb3
+
+build:
+  skip: False # [not py27]
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - ipython
+    - sqlalchemy
+    - sphinx
+    - pyparsing 
+
+  run:
+    - python
+    - numpy
+    - ipython
+    - sqlalchemy
+    - sphinx
+    - pyparsing <2.0.0
+
+test:
+  imports:
+    - ibidas
+
+about:
+  home: http://pythonhosted.org/Ibidas/
+  license: Public domain
+  summary: "Ibidas is an environment for data handling and exploration, able to cope with different data structures and sources"
+

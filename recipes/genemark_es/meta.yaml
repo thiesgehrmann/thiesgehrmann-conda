@@ -1,0 +1,27 @@
+about:
+  home: http://topaz.gatech.edu/GeneMark/index.html
+  license: ''
+  summary: 'Gene Prediction in Eukaryotes'
+
+build:
+  number: 1
+  skip: False # [osx]
+
+package:
+  name: genemark_es
+  version: '4.33'
+
+requirements:
+  build:
+      - perl-module-build
+  run:
+      - perl-yaml
+      - perl-hash-merge
+      - perl-logger-simple
+      - perl-parallel-forkmanager
+      - perl-pathtools
+      - perl-scalar-util-numeric
+
+source:
+  url: "http://topaz.gatech.edu/GeneMark/license_download.cgi?program=gmet&os=linux64&name=Thies+Gehrmann2&institution=CBS+KNAW&address=&city=&state=&country=Netherlands&email=t20.gehrmann%40cbs.knaw.nl&submit=I+agree+to+the+terms+of+this+license+agreement"
+  folder: genemark_es

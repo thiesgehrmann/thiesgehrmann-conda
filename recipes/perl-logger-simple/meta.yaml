@@ -1,0 +1,28 @@
+package:
+  name: perl-logger-simple
+  version: "2.0"
+
+source:
+  fn:  Logger-Simple-2.0.tar.gz
+  url: http://search.cpan.org/CPAN/authors/id/T/TS/TSTANLEY/Logger-Simple-2.0.tar.gz
+  md5: 3bcb037d2f2763b7e43d54b28cc46ce0
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - perl-threaded
+    - perl-app-cpanminus
+
+  run:
+    - perl-threaded
+
+test:
+  imports:
+    - Logger::Simple
+
+about:
+  home: http://search.cpan.org/~tstanley/Logger-Simple-2.0/Simple.pm
+  license: perl_5
+  summary: ' Implementation of the Simran-Log-Log and Simran-Error-Error modules'

@@ -1,0 +1,27 @@
+about:
+    home: https://perso.uclouvain.be/vincent.blondel/research/louvain.html
+    summary: Community detection tool
+    license: LGPL3
+
+package:
+    name: louvain_generic
+    version: 0.3.1
+
+build:
+    number: 0
+    skip: False  # [not py27]
+    detect_binary_files_with_prefix: True
+
+requirements:
+    build:
+        - gcc # [not osx]
+        - llvm # [osx]
+    run:
+        - libgcc # [not osx]
+source:
+    url: https://github.com/thiesgehrmann/louvain/archive/0.3.1.tar.gz
+    md5: f8e2f495b189406cfc5c983e1fa5d29e
+
+test:
+    commands:
+        - louvain &> /dev/null

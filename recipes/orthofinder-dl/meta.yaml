@@ -1,0 +1,36 @@
+{% set version = "1.1.4" %}
+
+#conda-build orthofinder-dl --python=2.7
+
+package:
+  name: orthofinder-dl
+  version: {{ version }}
+
+build:
+  number: 0
+  # Only works in py27
+  #skip: True # [not py27]
+  skip: False
+
+source:
+  git_url: https://github.com/thiesgehrmann/OrthoFinder.git
+
+requirements:
+  run:
+    - python
+    - scipy
+    - blast
+    - diamond
+    - mcl
+    - louvain_generic
+    - fastme
+    - dlcpar
+
+test:
+  commands:
+    - orthofinder-dl.py
+
+about:
+  home: https://github.com/thiesgehrmann/OrthoFinder
+  summary: Accurate inference of orthogroups, orthologues, gene trees and rooted species tree made easy! With Diamond instead of Blast, and Louvain instead of MCL
+  license: GPLv3

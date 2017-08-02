@@ -1,0 +1,28 @@
+about:
+    home: http://bioinformatics.psb.ugent.be/software/details/i--ADHoRe
+    summary: i-ADHoRe is a highly sensitive software tool to detect degenerated homology relations within and between different genomes.
+    license: Academic Free Use
+
+package:
+    name: iadhore
+    version: 3.0.01
+
+build:
+    number: 0
+    skip: False
+
+requirements:
+    build:
+        - gcc # [not osx]
+        - cmake
+        - libpng
+    run:
+        - libgcc # [not osx]
+        - libpng
+source:
+    url: http://bioinformatics.psb.ugent.be/downloads/psb/i-adhore/i-adhore-3.0.01.tar.gz
+    md5: f6d25e2461f4fb2e506bea035803dde6
+
+test:
+    commands:
+        - i-adhore &> /dev/null
